@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+        stages {
+            stage( 'pull cord') {
+                steps {
+                    git credentialsId: 'ssh-key', url: 'git@github.com:Mahatoshiv/My_repo.git'
+                    sh 'echo "code pull successfully"'
+                }
+            }
+        }
+}
